@@ -16,10 +16,10 @@ export default function TotalProblem(userName) {
           // console.log("result", result);
           setData(result['result']);
         } else {
-          console.error('Error:', result.result);
+          console.error('Total Problem Error:', result.result);
         }
       } catch (error) {
-        console.error('Fetch error:', error);
+        console.error('Total Problem Fetch error:', error);
       }
     };
 
