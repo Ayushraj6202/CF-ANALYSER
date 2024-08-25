@@ -20,7 +20,7 @@ const MyPieChart = ({data}) => {
             cornerRadius: 5,
             startAngle: 0,
             endAngle: 360,
-            cx: 150,
+            cx: 120,
             cy: 150,
           }
         ]}

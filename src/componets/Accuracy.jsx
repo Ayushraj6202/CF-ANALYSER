@@ -1,5 +1,4 @@
 import React from "react";
-import TotalProblem from "../Data/TotalProblem.js";
 import Accepted from "../Data/Accepted.js";
 import MyPieChart from "../utils/PieChart.jsx";
 

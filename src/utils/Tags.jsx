@@ -42,7 +42,7 @@ const MyPieChart = ({ data }) => {
           layout="vertical"
           align="right"
           verticalAlign="middle"
-          wrapperStyle={{ position: 'absolute', top: '20px', left: '320px' }} // Adjust position as needed
+          wrapperStyle={{ position: 'absolute', top: '20px', left: '300px' }} // Adjust position as needed
         />
       </PieChart>
     </div>
