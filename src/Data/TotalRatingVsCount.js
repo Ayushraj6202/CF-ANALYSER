@@ -1,7 +1,7 @@
 import Accepted from "./Accepted.js";
 
-export default function TotalRatingVsCount(userName){
-    const AllCorrect = Accepted(userName);
+export default function TotalRatingVsCount(allSubmissions){
+    const AllCorrect = Accepted(allSubmissions);
     const count = {};
     for(let i =0;i<AllCorrect.length;i++)
     {

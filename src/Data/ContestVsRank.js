@@ -3,8 +3,8 @@ const BestRank = {
     "rank":1e5,
     "contest":"name"
 }
-export default function ContestVsRank(userName){
-    const data = AllContestsData(userName);
+export default function ContestVsRank(AllContestData){
+    const data = AllContestData;
     data.forEach((item)=>{
         let rank = item['rank'];
         if(BestRank.rank>rank){

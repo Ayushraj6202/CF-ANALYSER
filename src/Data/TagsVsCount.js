@@ -1,7 +1,7 @@
 import Accepted from "./Accepted.js";
 
-export default function TagsVsCount(userName){
-    const AllCorrect = Accepted(userName);
+export default function TagsVsCount(data){
+    const AllCorrect = Accepted(data);
     const count = {};
     for(let i =0;i<AllCorrect.length;i++)
     {
@@ -12,6 +12,6 @@ export default function TagsVsCount(userName){
             count[tag] = (count[tag]||0) + 1;
         }
     }
-    // console.log(count);
+    console.log(count);
     return count;
 }   

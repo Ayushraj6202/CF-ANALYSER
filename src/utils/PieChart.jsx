@@ -6,6 +6,7 @@ const MyPieChart = ({data}) => {
 
   return (
     <div>
+      
       <PieChart
         // colors can be changed from here 
         colors={['green', 'red']}
