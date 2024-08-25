@@ -7,7 +7,8 @@ const MyPieChart = ({data}) => {
   return (
     <div>
       <PieChart
-        colors={['green-300', 'red']}
+        // colors can be changed from here 
+        colors={['green', 'red']}
         series={[
           {
             data: data,
