@@ -3,13 +3,14 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 
 const MyPieChart = ({data}) => {
-
+  // console.log("tags ",data);
+  
   return (
     <div>
       
       <PieChart
         // colors can be changed from here 
-        colors={['green', 'red']}
+        // colors={['green', 'red']}
         series={[
           {
             data: data,

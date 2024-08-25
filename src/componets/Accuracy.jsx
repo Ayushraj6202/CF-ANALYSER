@@ -17,7 +17,7 @@ export default function Accuracy({data,title}) {
     return (
         <>
         <div className="bg-slate-70">
-            <div className="flex">{title}</div>
+            <div className="flex bg-blue-300 p-2">{title}</div>
             <MyPieChart data={content}/>
         </div>
         </>

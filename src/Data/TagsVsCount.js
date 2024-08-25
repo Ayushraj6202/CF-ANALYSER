@@ -12,6 +12,6 @@ export default function TagsVsCount(data){
             count[tag] = (count[tag]||0) + 1;
         }
     }
-    console.log(count);
+    // console.log(count);
     return count;
 }   

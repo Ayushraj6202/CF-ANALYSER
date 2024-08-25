@@ -19,6 +19,7 @@ export default function TotalProblem(userName) {
           console.error('Total Problem Error:', result.result);
         }
       } catch (error) {
+        
         console.error('Total Problem Fetch error:', error);
       }
     };

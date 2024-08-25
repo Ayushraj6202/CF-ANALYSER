@@ -1,10 +1,15 @@
 import Accepted from "./Accepted.js";
 
-export default function TotalLiveContest(data){
+export default function TotalLiveContest(data) {
     const AllCorrect = data;
-    const Totalivesub = AllCorrect.filter((item)=>{
-        // console.log(item);
-        return ((item["author"]['participantType']==='CONTESTANT'))
-    })
-   return Totalivesub;
-}   
+
+    // Filter items where participantType is 'CONTESTANT'
+    const Totalivesub = AllCorrect.filter((item) => {
+        return item["author"] && item["author"]['participantType'] === 'CONTESTANT';
+    });
+
+    // Log the result for debugging
+    // console.log("Totalivesub:", Totalivesub);
+
+    return Totalivesub;
+}
