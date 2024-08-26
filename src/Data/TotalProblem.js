@@ -1,32 +1,30 @@
 import { useEffect, useState } from "react";
 
 export default function TotalProblem(userName) {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const url = `https://codeforces.com/api/user.status?handle=${userName}&from=1`;
-  // console.log(url);
-  
-  useEffect(() => {
+  // useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(
+          `https://codeforces.com/api/user.status?handle=${userName}&from=1`
+        );
         const result = await response.json();
 
-        if (response.ok&&result.result.length) {
-          // console.log("result", result);
-          setData(result['result']);
+        if (response.ok && result.result.length) {
+          // setData(result.result);
+          // console.log("result ",result.result);
+          
+          return result.result;
         } else {
-          console.error('Total Problem Error:', result.result);
+          console.error("Total Problem Error:", result.comment || "No data found");
         }
       } catch (error) {
-        
-        console.error('Total Problem Fetch error:', error);
+        console.error("Total Problem Fetch error:", error);
       }
     };
-
-    fetchData();
-  }, []);
-  // console.log(data);
-
-  return data;
+      return fetchData();
+  // }, [userName]);
+    return [];
+  // return data;
 }

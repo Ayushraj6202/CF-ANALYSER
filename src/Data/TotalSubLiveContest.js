@@ -2,8 +2,8 @@ import Accepted from "./Accepted.js";
 
 export default function TotalLiveContest(data) {
     const AllCorrect = data;
-
-    // Filter items where participantType is 'CONTESTANT'
+    // console.log("allcorrect ",data);
+    
     const Totalivesub = AllCorrect.filter((item) => {
         return item["author"] && item["author"]['participantType'] === 'CONTESTANT';
     });
