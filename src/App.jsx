@@ -13,14 +13,14 @@ import ContestRank from "./utils/ContestRank.jsx";
 function App() {
 	const [userName, setUserName] = useState("");
 	const [selectedValue, setSelectedValue] = useState(36);
-
+	const [submitClicked,setSubmitClicked] = useState(true);
 	const [allSubmissions, setAllSubmissions] = useState([]);
 	const [allContestData, setAllContestData] = useState([]);
 	const [allContestSubmission, setAllContestSubmission] = useState([]);
 	const [tagVsCountContest, setTagVsCountContest] = useState([]);
 	const [tagVsCountPractice, setTagVsCountPractice] = useState([]);
 	const [dataTimePeriod, setDataTimePeriod] = useState([]);
-	const [error, seterror] = useState(true)
+	const [error, seterror] = useState(true);
 	const UserExistsOrnot = `https://codeforces.com/api/user.info?handles=${userName}`
 
 	useEffect(() => {
@@ -59,7 +59,7 @@ function App() {
 		if (userName) {
 			fetchData();
 		}
-	}, [userName, selectedValue,error]);
+	}, [userName, selectedValue,error,submitClicked]);
 	// console.log(allSubmissions);
 	if (allSubmissions.length && allContestData.length)
 		return (
@@ -73,6 +73,7 @@ function App() {
 					setTagVsCountContest([]);
 					setTagVsCountPractice([]);
 					setDataTimePeriod([]);
+					setSubmitClicked(e=>!e);
 					setUserName(event.target.Username.value);
 				}}
 			>
