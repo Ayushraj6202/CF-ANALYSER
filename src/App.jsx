@@ -124,6 +124,11 @@ function App() {
 								</div>
 
 								<div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+									<dt className="font-medium text-gray-900">No of Contest</dt>
+									<dd className="text-gray-700 sm:col-span-2">{allContestData.length}</dd>
+								</div>
+
+								<div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
 									<dt className="font-medium text-gray-900">Best Rank</dt>
 									<dd className="text-gray-700 sm:col-span-2">{BestRank['rank']}</dd>
 								</div>
@@ -158,6 +163,7 @@ function App() {
 						<option value={12}>12</option>
 						<option value={24}>24</option>
 						<option value={36}>36</option>
+						<option value={120}>120</option>
 					</select>
 				</div>
 				<div className="flex justify-center mt-9 gap-20">
