@@ -22,8 +22,8 @@ const MyPieChart = ({ data }) => {
     .sort((a, b) => b.value - a.value); // Sort by value in descending order
 
   return (
-    <div className="pie-chart-container" style={{ position: 'relative', width: '400px', height: '400px' }}>
-      <PieChart width={400} height={400}>
+    <div className="pie-chart-container " style={{ position: 'relative', width: '400px', height: '400px' }}>
+      <PieChart width={400} height={300}>
         <Pie
           data={sortedData}
           dataKey="value"
@@ -38,12 +38,12 @@ const MyPieChart = ({ data }) => {
           ))}
         </Pie>
         <Tooltip />
-        <Legend
+        {/* <Legend
           layout="vertical"
           align="right"
           verticalAlign="middle"
           wrapperStyle={{ position: 'absolute', top: '20px', left: '300px' }} // Adjust position as needed
-        />
+        /> */}
       </PieChart>
     </div>
   );

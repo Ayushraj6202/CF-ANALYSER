@@ -8,7 +8,7 @@ const MyPieChart = ({data}) => {
   return (
     <div>
       
-      <PieChart
+      <PieChart className='bg-slate-300 mx-10 mt-5'
         // colors can be changed from here 
         // colors={['green', 'red']}
         series={[

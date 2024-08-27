@@ -5,13 +5,9 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 const valueFormatter = (value) => `${value}`;
 
 const chartSetting = {
-  yAxis: [
-    {
-      label: 'Count',
-    },
-  ],
+  yAxis: [{ label: 'Submission Count' }],
   series: [{ dataKey: 'count', label: 'Rating Vs Count', valueFormatter }],
-  height: 300,
+  height: window.innerWidth < 768 ? 250 : 300, // Adjust height based on screen size
   sx: {
     [`& .${axisClasses.directionY} .${axisClasses.label}`]: {
       transform: 'translateX(-10px)',
@@ -20,19 +16,17 @@ const chartSetting = {
 };
 
 export default function BarGraph({ dataset }) {
-  // Transform the dataset from an object to an array of objects
-  const transformedDataset = Object.entries(dataset) // Exclude the last entry
-    .map(([rating, count]) => ({
-      rating: Number(rating),
-      count,
-    }));
+  const transformedDataset = Object.entries(dataset).map(([rating, count]) => ({
+    rating: Number(rating),
+    count,
+  }));
 
   const [tickPlacement, setTickPlacement] = React.useState('middle');
   const [tickLabelPlacement, setTickLabelPlacement] = React.useState('middle');
 
   return (
-    <div style={{ width: '100%' }}>
-      <BarChart
+    <div style={{ width: '100%', maxHeight: '400px', overflowY: 'auto' }} className="chart-container">
+      <BarChart className='bg-slate-300 mt-5 mx-auto p-1'
         dataset={transformedDataset}
         xAxis={[
           { scaleType: 'band', dataKey: 'rating', tickPlacement, tickLabelPlacement },
