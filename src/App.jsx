@@ -126,17 +126,17 @@ function App() {
 				<div className="font-bold text-2xl flex justify-center bg-slate-300">
 					Accuracy
 				</div>
-				<div className="flex flex-col md:flex-row justify-center mt-9 px-4 ">
-					<div className='flex justify-center text-lg md:text-2xl mb-4 md:mb-0'>
+				<div className="flex flex-col md:flex-row justify-center mt-10 px-2 ">
+					<div className='flex justify-center text-lg md:text-2xl mb-1'>
 						<Accuracy data={allSubmissions} title="During Practice" />
 					</div>
-					<div className='flex justify-center text-lg md:text-2xl mb-4'>
+					<div className='flex justify-center text-lg md:text-2xl mb-1'>
 						<Accuracy data={allContestSubmission} title="During Contest" />
 					</div>
 				</div>
 
 				<div className="font-bold text-2xl flex justify-center mx-auto bg-slate-300">Contest Best Stats</div>
-				<div className="flex justify-center mt-9 gap-20">
+				<div className="flex justify-center mt-9 gap-10">
 					<div className='flex justify-center text-2xl'>
 						<div className="flow-root bg-slate-300 mb-10">
 							<dl className="p-2 my-3 divide-y divide-gray-100 text-sm">
@@ -179,7 +179,6 @@ function App() {
 						}}
 						className="range-dropdown"
 					>
-						{/* Dropdown options */}
 						<option value={3}>Last 3 Months</option>
 						<option value={6}>Last 6 Months</option>
 						<option value={12}>Last 12 Months</option>
@@ -196,15 +195,15 @@ function App() {
 					Problem Tags
 				</div>
 				<div className="flex flex-col md:flex-row justify-center mt-0 gap-1 md:gap-4 px-2">
-  <div className="flex flex-col items-center text-lg md:text-2xl">
-    <div className="bg-blue-300 p-1 w-full text-center">During Practice</div>
-    <Tags data={tagVsCountPractice} />
-  </div>
-  <div className="flex flex-col items-center text-lg md:text-2xl">
-    <div className="bg-blue-300 p-1 w-full text-center">During Contest</div>
-    <Tags data={tagVsCountContest} />
-  </div>
-</div>
+					<div className="flex flex-col items-center text-lg md:text-2xl">
+						<div className="bg-blue-300 p-1 w-full text-center">During Practice</div>
+						<Tags data={tagVsCountPractice} />
+					</div>
+					<div className="flex flex-col items-center text-lg md:text-2xl">
+						<div className="bg-blue-300 p-1 w-full text-center">During Contest</div>
+						<Tags data={tagVsCountContest} />
+					</div>
+				</div>
 
 
 			</>

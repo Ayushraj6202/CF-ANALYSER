@@ -10,8 +10,8 @@ export default function Accuracy({data,title}) {
     const acc = acceptedCount * 1.0 / totalProblemCount;
     // console.log(acc);
     const content = [
-        { id: 'Accepted', label: 'Accepted', value: acc*100 },
-        { id: 'Rejected', label: 'Rejected', value: (1-acc)*100 },
+        { id: 'Accepted', label: 'Accepted', value: acc*100 ,color:'#00FFFF'},
+        { id: 'Rejected', label: 'Rejected', value: (1-acc)*100,color:'#0F0000' },
       ];
     return (
         <>
