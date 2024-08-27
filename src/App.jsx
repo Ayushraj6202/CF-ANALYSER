@@ -220,7 +220,21 @@ function App() {
 
 					</div>
 				</div>
-
+				<div className="bg-blue-300 mt-2  py-2 flex flex-wrap mx-auto gap-4 justify-center ">
+					<div >
+						&copy;AYUSH RAJ
+					</div>
+					<div className="github-link-container">
+						<a
+							href="https://github.com/Ayushraj6202"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="github-link"
+						>
+							GitHub
+						</a>
+					</div>
+				</div>
 
 			</>
 		)
