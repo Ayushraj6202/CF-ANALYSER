@@ -22,16 +22,18 @@ const MyPieChart = ({ data }) => {
     .sort((a, b) => b.value - a.value); // Sort by value in descending order
 
   return (
-    <div className="pie-chart-container " style={{ position: 'relative', width: '400px', height: '400px' }}>
+    <div className="pie-chart-container " style={{ position: 'relative', width: '400px', height: '300px' }}>
       <PieChart width={400} height={300}>
         <Pie
           data={sortedData}
           dataKey="value"
           nameKey="name"
-          innerRadius={30}
+          // innerRadius={30}
           outerRadius={100}
-          paddingAngle={5}
-          cornerRadius={5}
+          // paddingAngle={5}
+          // cornerRadius={5}
+          startAngle={90} 
+          endAngle={540}
         >
           {sortedData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color} />

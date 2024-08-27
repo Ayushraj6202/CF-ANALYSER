@@ -7,7 +7,7 @@ export default function Accuracy({data,title}) {
     
     const totalProblemCount = data.length;
     const acceptedCount = Accepted(data).length;
-    const acc = acceptedCount * 1.0 / totalProblemCount;
+    const acc = (acceptedCount * 1.0 / totalProblemCount).toFixed(3);
     // console.log(acc);
     const content = [
         { id: 'Accepted', label: 'Accepted', value: acc*100 ,color:'#00FFFF'},
@@ -16,7 +16,7 @@ export default function Accuracy({data,title}) {
     return (
         <>
         <div className="bg-slate-70">
-            <div className="flex bg-blue-300 p-2">{title}</div>
+            <div className="flex bg-blue-300 px-2 mx-auto justify-center">{title}</div>
             <MyPieChart data={content}/>
         </div>
         </>

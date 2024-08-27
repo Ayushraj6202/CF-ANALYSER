@@ -194,14 +194,30 @@ function App() {
 				<div className="font-bold text-2xl flex justify-center bg-slate-300 mb-2">
 					Problem Tags
 				</div>
-				<div className="flex flex-col md:flex-row justify-center mt-0 gap-1 md:gap-4 px-2">
+				<div className="flex flex-col md:flex-row justify-center mt-0 gap-1  px-2">
 					<div className="flex flex-col items-center text-lg md:text-2xl">
 						<div className="bg-blue-300 p-1 w-full text-center">During Practice</div>
 						<Tags data={tagVsCountPractice} />
+						<div className="bg-slate-300 p-2 space-y-1">
+							<div>DP: {tagVsCountPractice['dp']}</div>
+							<div>Binary Search: {tagVsCountPractice['binary search']}</div>
+							<div>Data Structures: {tagVsCountPractice['data structures']}</div>
+							<div>DFS and Similar: {tagVsCountPractice['dfs and similar']}</div>
+							<div>Trees: {tagVsCountPractice['trees']}</div>
+						</div>
+
 					</div>
 					<div className="flex flex-col items-center text-lg md:text-2xl">
 						<div className="bg-blue-300 p-1 w-full text-center">During Contest</div>
 						<Tags data={tagVsCountContest} />
+						<div className="bg-slate-300 mb-2 mx-auto p-2 space-y-1">
+							<div>DP: {tagVsCountContest['dp']}</div>
+							<div>Binary Search: {tagVsCountContest['binary search']}</div>
+							<div>Data Structures: {tagVsCountContest['data structures']}</div>
+							<div>DFS and Similar: {tagVsCountContest['dfs and similar']}</div>
+							<div>Trees: {tagVsCountContest['trees']}</div>
+						</div>
+
 					</div>
 				</div>
 
