@@ -136,7 +136,7 @@ function App() {
 				</div>
 
 				<div className="font-bold text-2xl flex justify-center mx-auto bg-slate-300">Contest Best Stats</div>
-				<div className="flex justify-center mt-9 gap-10">
+				<div className="flex justify-center mt-9 mx-auto gap-10">
 					<div className='flex justify-center text-2xl'>
 						<div className="flow-root bg-slate-300 mb-10">
 							<dl className="p-2 my-3 divide-y divide-gray-100 text-sm">
@@ -217,22 +217,57 @@ function App() {
 							<div>DFS and Similar: {tagVsCountContest['dfs and similar']}</div>
 							<div>Trees: {tagVsCountContest['trees']}</div>
 						</div>
-
 					</div>
 				</div>
-				<div className="bg-blue-300 mt-2  py-2 flex flex-wrap mx-auto gap-4 justify-center ">
-					<div >
-						&copy;AYUSH RAJ
+				<div className="bg-blue-300 mt-2 p-4 text-xl flex flex-col items-center">
+					{/* <!-- Heading for the profiles section --> */}
+					<div className="mb-4 text-2xl  font-semibold text-blue-700">
+						My Profiles
 					</div>
-					<div className="github-link-container">
-						<a
-							href="https://github.com/Ayushraj6202"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="github-link"
-						>
-							GitHub
-						</a>
+
+					{/* <!-- Copyright and Links Section --> */}
+					<div className="flex flex-col items-center md:flex-row md:items-center md:space-x-6 space-y-4 md:space-y-0">
+
+						<div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+							<a
+								href="https://codeforces.com/profile/ayush_raj14"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-700 hover:text-blue-900 transition duration-300"
+							>
+								CodeForces
+							</a>
+							<a
+								href="https://leetcode.com/u/ayush_raj_14/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-700 hover:text-blue-900 transition duration-300"
+							>
+								LeetCode
+							</a>
+							<a
+								href="https://github.com/Ayushraj6202"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-700 hover:text-blue-900 transition duration-300"
+							>
+								GitHub
+							</a>
+							<a
+								href="https://www.linkedin.com/in/ayush-raj-469737246/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-700 hover:text-blue-900 transition duration-300"
+							>
+								LinkedIn
+							</a>
+							<a href="mailto:ayush2101ce@gmail.com" className="hover:text-blue-900 transition duration-300">Email</a>
+							<div className="text-blue-700">
+								<div className="flex-shrink-0 text-red-700">
+									&copy; AYUSH RAJ
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
