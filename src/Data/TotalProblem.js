@@ -1,9 +1,4 @@
-import { useEffect, useState } from "react";
-
 export default function TotalProblem(userName) {
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -12,9 +7,6 @@ export default function TotalProblem(userName) {
         const result = await response.json();
 
         if (response.ok && result.result.length) {
-          // setData(result.result);
-          // console.log("result ",result.result);
-          
           return result.result;
         } else {
           console.error("Total Problem Error:", result.comment || "No data found");
@@ -24,7 +16,4 @@ export default function TotalProblem(userName) {
       }
     };
       return fetchData();
-  // }, [userName]);
-    return [];
-  // return data;
 }

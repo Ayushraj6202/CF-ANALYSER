@@ -1,9 +1,4 @@
-import { useEffect, useState } from "react";
-
 export default function AllContestsData(userName) {
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -13,7 +8,6 @@ export default function AllContestsData(userName) {
 
         if (response.ok) {
             return result.result;
-        //   setData(result.result || []);
         } else {
           console.error("Contest Data Error:", result.comment || "No data found");
         }
@@ -25,7 +19,6 @@ export default function AllContestsData(userName) {
     if (userName) {
       return fetchData();
     }
-//   }, [userName]);
 
   return [];
 }
